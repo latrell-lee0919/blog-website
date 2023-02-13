@@ -1,0 +1,8 @@
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.disabledLink {
+  pointer-events: none;
+}
+
