@@ -29,7 +29,7 @@ export default class ContentfulApi {
 
     static async getAllBlogPosts() {
         const query = `{
-            blogPostCollection {
+            blogPostCollection(order: date_DESC) {
               items {
                 sys {
                   id
@@ -81,7 +81,7 @@ export default class ContentfulApi {
 
     static async getAllSlugs() {
         const query = `{
-            blogPostCollection(order:date_DESC) {
+            blogPostCollection {
                 items {
                   slug
                 }

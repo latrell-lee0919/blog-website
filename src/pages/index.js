@@ -24,7 +24,7 @@ export default function Home({ blogData }) {
          See what&#39;s been on my mind lately!
       </p>
       <hr className="hr" />
-      <BlogsFeed blog={blogData}/>
+      <BlogsFeed blog={blogData?.blogPostCollection?.items}/>
     </>
   )   
 }

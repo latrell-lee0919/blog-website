@@ -5,7 +5,7 @@ export default function BlogsFeed({ blog }) {
   return (
     <div className="container">
       <ul className="list-group list-group-flush">
-      {blog?.blogPostCollection?.items.map(({ slug, date, title, preview }) => (
+      {blog.map(({ slug, date, title, preview }) => (
         <li key={slug} className="list-group-item">
           <article>
             <small className="d-flex justify-content-center">
