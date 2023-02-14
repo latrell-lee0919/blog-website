@@ -18,6 +18,7 @@ export default function Footer() {
       <Link href="http://latrell-dev.com/" style={{ textDecoration: 'none' }}>
         <p className="lead text-white"> latrell-dev.com</p>
       </Link>
+      Connect with me on LinkedIn:
       <Link href="https://www.linkedin.com/in/latrell-lee-27801a154/" style={{ textDecoration: 'none' }}>
         <h3>
           <AiFillLinkedin />
