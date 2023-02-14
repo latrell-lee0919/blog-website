@@ -4,14 +4,17 @@ import { AiFillLinkedin } from 'react-icons/ai'
 export default function Footer() {
   return (
   <footer 
-  className="lead bg-dark text-center text-lg-start text-white fixed-bottom"
+  className="lead bg-dark text-center text-lg-start text-white"
   style={{
-    position: 'relative',
-    bottom: '0',
-    marginTop: '-150px',
-    height: '200px',
-    clear: 'both',
-    paddingTop: '20px'
+    padding: '2rem 2rem 4rem',
+    marginTop: '2rem',
+    borderTop: '0.5rem solid',
+    display: 'flex',
+    flexDirection: 'column',
+    // marginTop: '-150px',
+    // height: '400px',
+    // clear: 'both',
+    // paddingTop: '20px'
   }}
   >
     <div className="text-center p-3">
