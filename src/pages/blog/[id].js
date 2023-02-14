@@ -64,8 +64,8 @@ export default function Blog({ blog }) {
             <Image 
                 priority
                 src={blogData.primaryPicture?.url}
-                height={400}
-                width={400}
+                height={240}
+                width={240}
                 alt="Primary Blog Picture"
               />
             <section>

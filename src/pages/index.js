@@ -30,7 +30,7 @@ export default function Home({ blogData }) {
       <br />
       <div className='d-flex justify-content-center mb-5' style={{ paddingBottom: '200px'}}>
         <Link href="/blog" style={{ textDecoration: 'none' }}>
-          <button type="button" class="btn btn-secondary">See More Articles</button>
+          <button type="button" className="btn btn-secondary">See More Articles</button>
         </Link>
       </div>
       <Footer />
