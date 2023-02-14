@@ -7,6 +7,7 @@ export default function Footer() {
   className="lead bg-dark text-center text-lg-start text-white fixed-bottom"
   style={{
     position: 'relative',
+    bottom: '0',
     marginTop: '-150px',
     height: '200px',
     clear: 'both',
