@@ -1,4 +1,5 @@
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 import Image from 'next/image';
 import ContentfulApi from 'utils/ContentfulApi';
 import Date from '@/components/date';
@@ -34,9 +35,6 @@ export default function Blog({ blog }) {
 
   const Quote = ({ children }) => <blockquote className="blockquote">{ children }</blockquote>;
 
-  const BlogImage = ({ children }) => <Image priority src={ children } height={144} width={144} alt="Blog Img" />;
-  // revisit later
-
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
@@ -44,8 +42,7 @@ export default function Blog({ blog }) {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
       [BLOCKS.HEADING_3]: (node, children) => <Heading>{children}</Heading>,
-      [BLOCKS.QUOTE]: (node, children) => <Quote>{children}</Quote>,
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => <BlogImage />
+      [BLOCKS.QUOTE]: (node, children) => <Quote>{children}</Quote>
     },
   };
 
@@ -64,6 +61,13 @@ export default function Blog({ blog }) {
             <h1 className="display-6">
               {blogData.title}
             </h1>
+            <Image 
+                priority
+                src={blogData.primaryPicture?.url}
+                height={400}
+                width={400}
+                alt="Primary Blog Picture"
+              />
             <section>
               {
                 documentToReactComponents(richTextDocument, options)
@@ -72,6 +76,8 @@ export default function Blog({ blog }) {
           </div>
         </div>
       </div>
+      <div style={{ paddingBottom: '200px'}}/>
+      <Footer />
     </>
   )
 }

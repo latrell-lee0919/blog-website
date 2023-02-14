@@ -1,6 +1,7 @@
 import ContentfulApi from 'utils/ContentfulApi';
 import Header from '@/components/header';
 import BlogsFeed from '@/components/blogs';
+import Footer from '@/components/footer';
 import { useState } from 'react';
 
 export async function getStaticProps() {
@@ -55,6 +56,8 @@ export default function Blogs({ blogData }) {
       </p>
       <hr className="hr" />
       <BlogsFeed blog={filteredBlogs}/>
+      <div style={{ paddingBottom: '200px'}}/>
+      <Footer />
     </>
     
   )

@@ -1,6 +1,8 @@
 import ContentfulApi from 'utils/ContentfulApi';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 import BlogsFeed from '@/components/blogs';
+import Link from 'next/link';
 
 export async function getStaticProps() {
     const blogData = await ContentfulApi.getBlogPostsPreviews();
@@ -25,6 +27,13 @@ export default function Home({ blogData }) {
       </p>
       <hr className="hr" />
       <BlogsFeed blog={blogData?.blogPostCollection?.items}/>
+      <br />
+      <div className='d-flex justify-content-center mb-5' style={{ paddingBottom: '200px'}}>
+        <Link href="/blog" style={{ textDecoration: 'none' }}>
+          <button type="button" class="btn btn-secondary">See More Articles</button>
+        </Link>
+      </div>
+      <Footer />
     </>
   )   
 }
