@@ -50,8 +50,8 @@ export default function Blogs({ blogData }) {
       </h1>
       <Filter />
       <br />
-      <p className="lead d-flex justify-content-center text-wrap">
-        Check out my writings below! A variery of content can be found, from fitness to book reviews. 
+      <p className="lead d-flex justify-content-center text-center">
+        Check out my writings below! A variery of content can be found, from fitness to book reviews. Use the filter above if you don&#39;t feel like scrolling! 
       </p>
       <hr className="hr" />
       <BlogsFeed blog={filteredBlogs}/>

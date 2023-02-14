@@ -32,7 +32,7 @@ export default function Blog({ blog }) {
 
   const Heading = ({ children }) => <p className="h4">{children}</p>;
 
-  const Quote = ({ children }) => <blockquote class="blockquote">{ children }</blockquote>;
+  const Quote = ({ children }) => <blockquote className="blockquote">{ children }</blockquote>;
 
   const BlogImage = ({ children }) => <Image priority src={ children } height={144} width={144} alt="Blog Img" />;
   // revisit later
@@ -52,22 +52,24 @@ export default function Blog({ blog }) {
   return (
     <>
       <Header />
-      <div className="row">
-        <div className="col-md-8 offset-md-2">
-          <br />
-          <small>
-              <Date dateString={blogData.date} />
-          </small>
-          <br />
-          <br />
-          <h1 className="display-6">
-            {blogData.title}
-          </h1>
-          <section>
-            {
-              documentToReactComponents(richTextDocument, options)
-            }
-          </section>
+      <div className="container-fluid no-padding">
+        <div className="row">
+          <div className="col-md-8 offset-md-2">
+            <br />
+            <small>
+                <Date dateString={blogData.date} />
+            </small>
+            <br />
+            <br />
+            <h1 className="display-6">
+              {blogData.title}
+            </h1>
+            <section>
+              {
+                documentToReactComponents(richTextDocument, options)
+              }
+            </section>
+          </div>
         </div>
       </div>
     </>

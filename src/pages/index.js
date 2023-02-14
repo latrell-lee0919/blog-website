@@ -20,7 +20,7 @@ export default function Home({ blogData }) {
         Recent Articles
       </h1>
       <br />
-      <p className="lead d-flex justify-content-center">
+      <p className="lead d-flex justify-content-center text-center">
          See what&#39;s been on my mind lately!
       </p>
       <hr className="hr" />

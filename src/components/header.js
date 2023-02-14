@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 
 export default function Header() {
     return (
-      <div className="container-fluid bg-dark">
+      <div className="container-fluid bg-dark no-padding">
         <div className="row">
           <div className="text-center">
             <Image 
@@ -16,18 +16,19 @@ export default function Header() {
                 width={144}
                 alt="me"
               />
+            <p className="lead text-white">TRELL-WRITES</p>
           </div>
         </div>
         <br />
-        <div className="row d-flex justify-content-center">
-          <div className="col-2">
+        <div className="row">
+          <div className="col">
               <Link href="/" style={{ textDecoration: 'none' }}>
-                <h1 className="display-6 text-white">HOME</h1>
+                <h1 className="display-6 text-center text-white ps-4">HOME</h1>
               </Link>
           </div>
-          <div className="col-2">
+          <div className="col">
               <Link href="/blog" style={{ textDecoration: 'none' }}>
-                <h1 className="display-6 text-white">BLOGS</h1>
+                <h1 className="display-6 text-center text-white pe-4">BLOGS</h1>
               </Link>
           </div>
         </div>
