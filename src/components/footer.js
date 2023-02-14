@@ -10,11 +10,7 @@ export default function Footer() {
     marginTop: '2rem',
     borderTop: '0.5rem solid',
     display: 'flex',
-    flexDirection: 'column',
-    // marginTop: '-150px',
-    // height: '400px',
-    // clear: 'both',
-    // paddingTop: '20px'
+    flexDirection: 'column'
   }}
   >
     <div className="text-center p-3">
