@@ -16,7 +16,7 @@ export default function BlogsFeed({ blog }) {
                 {title}
               </h1>
             </Link>
-            <span className="lead d-flex justify-content-center">
+            <span className="lead d-flex justify-content-center text-center">
               {preview}
             </span>
           </article>
